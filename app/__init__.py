@@ -19,8 +19,17 @@ def home():
     return 'Hello, World!'
 
 @app.route('/get_data', methods = ['GET'])
-def get_data():
-    data = list(mongo.db.newCollection.find({}, {'_id':False}))
+@app.route('/get_data/<filter_field>/<value>')
+def get_data(filter_field = None, value = None):
+    if filter_field and value:
+        patient_list = db_handler.get_patient({filter_field : value})
+    else : 
+        patient_list = db_handler.get_patient()
+    data = []
+    if not patient_list :
+        return jsonify({})
+    for patient in patient_list :
+        data.append(patient.serialize_json())
     return jsonify(data)    
 
 @app.route('/api/post_patient', methods=['POST'])

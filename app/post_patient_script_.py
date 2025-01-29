@@ -1,7 +1,7 @@
 import requests
 import json
 import datetime
-from .. import constant
+import constant
 
 # URL of the Flask API endpoint
 url = 'http://127.0.0.1:5000/api/post_patient'  # Change this if Flask is hosted elsewhere

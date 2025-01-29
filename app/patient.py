@@ -1,5 +1,6 @@
 from datetime import datetime
 from typing import Optional, List
+import json
 
 from activity import Activity
 from constant import DATETIME_FORMAT
@@ -43,7 +44,7 @@ class Patient:
         return patient_data
     
     @classmethod
-    def deserialize_json(cls, patient_data) :
+    def deserialize_json(cls, patient_data : 'json') :
         activities = [Activity.deserialize_json(activity) for activity in patient_data.get("activities",[])]
         patient = cls(            
             kkumail = patient_data["kkumail"],
