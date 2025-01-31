@@ -1,0 +1,21 @@
+{
+    "kkumail" : "kkumail",
+    "first_name" : "first_name",
+    "last_name" : "last_name",
+    "phone" : "phone",
+    "birth_date" : "birth_date",
+    "height" : "height",
+    "weight" : "weight",
+    "activities" : [
+        {
+            "activity_datetime" : "activity_datetime",
+            "activity_name" : "activity_name",
+            "calories" : "calories"
+        },
+        {
+            "activity_datetime" : "activity_datetime",
+            "activity_name" : "activity_name",
+            "calories" : "calories"
+        }
+    ]
+}
