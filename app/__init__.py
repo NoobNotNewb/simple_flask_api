@@ -35,11 +35,20 @@ def get_data(filter_field = None, value = None):
 @app.route('/api/post_patient', methods=['POST'])
 def post_patient():
     # Get data from the POST request
-    data = request.get_json()  # Assumes the data is sent in JSON format
+    data = request.get_json() 
     new_patient = Patient.deserialize_json(data)
-    #if not data or 'name' not in data or 'age' not in data:
-    #   return jsonify({"error": "Invalid data"}), 400
     return db_handler.new_patient(new_patient)
+
+@app.route('/api/add_activity', methods=['POST'])
+def add_activity():
+    # Get data from the POST request
+    data = request.get_json() 
+    kkumail = data.get('kkumail', None) 
+    activity_data = data.get('activity', {})
+    if not kkumail or not activity_data :
+        return 
+    new_activity = Activity.deserialize_json(activity_data)
+    return db_handler.add_activity(new_activity, kkumail)
 
 # @app.route('/form')
 # def form():

@@ -1,21 +1,79 @@
-{
-    "kkumail" : "kkumail",
-    "first_name" : "first_name",
-    "last_name" : "last_name",
-    "phone" : "phone",
-    "birth_date" : "birth_date",
-    "height" : "height",
-    "weight" : "weight",
-    "activities" : [
-        {
-            "activity_datetime" : "activity_datetime",
-            "activity_name" : "activity_name",
-            "calories" : "calories"
-        },
-        {
-            "activity_datetime" : "activity_datetime",
-            "activity_name" : "activity_name",
-            "calories" : "calories"
+[
+    {
+        "patient": {
+            "kkumail": "xxxxxxxxxxxx@kkumail.com",
+            "first_name": "first_name",
+            "last_name": "last_name",
+            "nickname": "nickname",
+            "phone": "phone",
+            "sex": "sex",
+            "birth_date": "20-3-2025T00:00:00",
+            "height": "height",
+            "weight": "weight",
+            "institution": "institution",
+            "image_path": "image_path",
+            "activities": [
+                {
+                    "start_datetime": "20-3-2025T06:16:42+07:00",
+                    "duration_minutes": "30",
+                    "type": "ref_from_activity_type",
+                    "calories": "100",
+                    "image_path" : "image_path"
+                }
+            ],
+            "sleep": [
+                {
+                    "start_datetime": "20-3-2025T06:16:42+07:00",
+                    "duration_minutes": "480"
+                }
+            ],
+            "food": [
+                {
+                    "start_datetime": "20-3-2025T06:16:42+07:00",
+                    "type" : "ref_from_food_type",
+                    "calories": "100",
+                    "image_path" : "image_path"
+                }
+            ],
+            "points": [
+                {
+                    "datetime": "20-3-2025T06:16:42+07:00",
+                    "type": "use",
+                    "value" : "50",
+                    "description": "use for redeem point?",
+                    "some_ref?" : "(BoughtItem,EventThatGivereward)"
+                },
+                {
+                    "datetime": "20-3-2025T06:16:42+07:00",
+                    "type": "recieve",
+                    "value" : "50",
+                    "description": "recieve from activity",
+                    "some_ref?" : "(BoughtItem,EventThatGivereward)"
+                }
+            ]
         }
-    ]
-}
+    },
+    {
+        "event": {
+            "create_datetime" : "20-3-2025T06:16:42+07:00",
+            "start_datetime" : "20-3-2025T06:16:42+07:00",
+            "end_datetime" : "20-3-2025T06:16:42+07:00",
+            "title" : "Exercise to gain point!!",
+            "condition" : "Attach image of exercising",
+            "point_gain" : "50"
+        }
+    },
+    {
+        "reward": {
+            "point" : "point(Currency???)",
+            "price" : "50",
+            "item" : "item"
+        }
+    },
+    {
+        "activity_type": ["run", "walk", "swiming"]
+    },
+    {
+        "food_type": ["carbohydrate?", "keto?","5type"]
+    }
+]

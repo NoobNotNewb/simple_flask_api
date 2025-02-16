@@ -35,5 +35,5 @@ class DatabaseHandler :
             patient_list.append(patient)
         return patient_list
 
-    def add_activity(self, activity : Activity, patient : Patient):
-        pass
+    def add_activity(self, activity : Activity, kkumail : str):
+        print("add Activity")
