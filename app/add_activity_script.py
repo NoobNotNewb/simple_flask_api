@@ -10,16 +10,18 @@ url = 'http://127.0.0.1:5000/api/add_activity'  # Change this if Flask is hosted
 data = {
     "kkumail" : "doraemon",
     "activity" : {
-        "activity_datetime" : "20-3-2000",
-        "activity_name" : "activity_name",
-        "calories" : "calories"
+        "start_datetime" : "23-2-2025T00:00:00",
+        "duration_minutes" : "30",
+        "type" : "ref_to_activity_type?",
+        "calories" : "50",
+        "image_path" : "asdfjka"
     }
 }
 # Send POST request to the Flask API
 response = requests.post(url, json=data)
 
 # Check if the request was successful
-if response.status_code == 201:
-    print("Data inserted successfully!")
+if response.status_code == 200:
+    print("Data update successfully!")
 else:
-    print("Failed to insert data:", response.json())
+    print("Failed to update data:", response.json())

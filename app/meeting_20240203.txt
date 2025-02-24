@@ -1,0 +1,48 @@
+Person
+ - Activity
+    - Start
+    - End
+    - Type
+    - Cal
+    - Hrs
+    - Min
+    - Image
+ - Food
+    - Start
+    - End
+    - Type
+    - Cal
+    - Hrs
+    - Min
+    - Image
+ - Sleep
+    - Start
+    - End
+    - Hrs
+    - Min
+ - Points
+    - Receive_date
+    - Used_date
+ - Event
+ - Reward
+
+Event
+ - Create_date
+ - Start_date
+ - End_date
+ - Title
+ - Condition
+ - Point_gain
+
+Reward
+ - Point
+ - Price
+ - Item
+
+Activity_Type
+ - Name
+ - Group
+
+Food_Type
+ - Name
+ - Group
